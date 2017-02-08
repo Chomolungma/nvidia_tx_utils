@@ -3,7 +3,7 @@ Repository of all NVIDIA TX-1 related code and usage instructions.
 
 1. When you boot up the Jetson TX1 for the first time a terminal window will appear. To use the Ubuntu via the GUI, install the Nvidia Linux driver.
 	* Go to home directory (use username: ubuntu and password: ubuntu)
-	* > $ cd NVIDIA-INSTALLER
+	* '''' $ cd NVIDIA-INSTALLER ''''
 	* > $ sudo ./installer.sh
 	* After the installation completes:
 	* > $ sudo reboot
