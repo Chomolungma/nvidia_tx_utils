@@ -19,10 +19,26 @@ Repository of all NVIDIA TX-1 related code and usage instructions.
 	* $ chmod +x JetPack-L4T-2.3.1-linux-x64.run
 	* Run the installer file:
 	* $ ./JetPack-L4T-2.3.1-linux-x64.run
-	* Select Jetson platform (here: Jetson TX1)
-	* In the networking layout option, select the first option as mentioned in the above instructions
+	* Select Jetson platform (here: Jetson TX1 with Ubuntu Host)
+	* Enter administrator password
+	* Select Standard | Full in Component Manager
+	* Accept all Terms and Conditions
+	* Once the installation completes on the Host machine, you will see a message "Completed Host installation, Installer will continue with Device/Post installation." - Click Next
+	* In the networking layout option, select the first option as mentioned in the above instructions ( Device accesses Internet via router/switch. )
 	* Put the Jetson TX1 in Force USB Recovery Mode by following the instructions on the screen
+	* The device will proceed to get flashed. Wait until you see the message "Finished Flashing OS". Then hit the reset button on the device and wait till it enters the Ubuntu GUI.
+	* Hit enter to continue
 	* Set the IP address using ifconfig
 	* Remove all packages from the host (y/n) - decide accordingly
 
-3. 
+3. CUDA 8.0
+	* By installing JetPack, you should now be able to run CUDA and all the samples that come with it
+	* To check if you have successfully intalled cuda
+	* $ nvcc -V
+	* To run a sample, from the home directory
+	* $ cd ~/NVIDIA_CUDA-8.0_Samples/bin/aarch64/linux/release/
+	* You should see a list of executable scripts for all the CUDA samples
+	* $ ./smokeParticles
+	* You should see the example running! I noticed a frame rate of ~38fps for this example
+
+
