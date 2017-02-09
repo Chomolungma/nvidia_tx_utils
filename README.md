@@ -1,13 +1,14 @@
 # NVIDIA - TX1 
 Repository of all NVIDIA TX-1 related code and usage instructions. 
 
-1. When you boot up the Jetson TX1 for the first time a terminal window will appear. To use the Ubuntu via the GUI, install the Nvidia Linux driver.
-	* Go to home directory (use username: ubuntu and password: ubuntu)
-	* $ cd NVIDIA-INSTALLER 
-	* $ sudo ./installer.sh
-	* After the installation completes:
-	* $ sudo reboot
-	* You should now be able to log into the Ubuntu GUI
+## Initial Set-up
+When you boot up the Jetson TX1 for the first time a terminal window will appear. To use the Ubuntu via the GUI, install the Nvidia Linux drive
+Go to home directory (use username: ubuntu and password: ubuntu)
+>$ cd NVIDIA-INSTALLER 
+>$ sudo ./installer.sh
+After the installation completes:
+>$ sudo reboot
+You should now be able to log into the Ubuntu GUI
 
 2. JetPack - https://developer.nvidia.com/embedded/jetpack
 	* Download JetPack on the Host Machine by joining Embedded System Developer programme on NVIDIA page
@@ -40,5 +41,12 @@ Repository of all NVIDIA TX-1 related code and usage instructions.
 	* You should see a list of executable scripts for all the CUDA samples
 	* $ ./smokeParticles
 	* You should see the example running! I noticed a frame rate of ~38fps for this example
+
+4. VisionWorks
+	* In a similar manner you can test the Vision Works install
+	* $ cd ~/VisionWorks/bin/aarch64/linux/release/
+	* ./mvx-sfm-test
+	* You should see a running example of Structure From Motion in what appears to be a parking lot
+
 
 
