@@ -2,29 +2,29 @@
 Repository of all NVIDIA TX-1 related code and usage instructions. 
 
 ## Initial Set-up
-When you boot up the Jetson TX1 for the first time a terminal window will appear. To use the Ubuntu via the GUI, install the Nvidia Linux drive
-Go to home directory (use username: **ubuntu** and password: **ubuntu**)<br/>
+1. When you boot up the Jetson TX1 for the first time a terminal window will appear. To use the Ubuntu via the GUI, install the Nvidia Linux drive <br/>
+2. Go to home directory (use username: **ubuntu** and password: **ubuntu**)<br/>
 >$ cd NVIDIA-INSTALLER <br/>
 
 >$ sudo ./installer.sh <br/>
 
-After the installation completes:<br/>
+3. After the installation completes:<br/>
 >$ sudo reboot <br/>
 
-You should now be able to log into the Ubuntu GUI
+4. You should now be able to log into the Ubuntu GUI
 
 ## Installing JetPack 
 https://developer.nvidia.com/embedded/jetpack<br/>
-* Download JetPack on the Host Machine by joining Embedded System Developer programme on NVIDIA page<br/>
-* Latest at the time of writing : JetPack-L4T-2.3.1-linux-x64.run<br/>
-* Connect HOST (Ubuntu 14.04) machine to router (switch)<br/>
-* Connect Jetson (TX1) to router (switch)<br/>
-* Navigate to download folder of JetPack file<br/>
-* Give executability rights to the installer file:<br/>
+Download JetPack on the Host Machine by joining Embedded System Developer programme on NVIDIA page<br/>
+Latest at the time of writing : JetPack-L4T-2.3.1-linux-x64.run<br/>
+Connect HOST (Ubuntu 14.04) machine to router (switch)<br/>
+Connect Jetson (TX1) to router (switch)<br/>
+Navigate to download folder of JetPack file<br/>
+Give executability rights to the installer file:<br/>
 
 > $ chmod +x JetPack-L4T-2.3.1-linux-x64.run
 
-* Run the installer file:<br/>
+Run the installer file:<br/>
 
 > $ ./JetPack-L4T-2.3.1-linux-x64.run
 
