@@ -21,9 +21,11 @@ https://developer.nvidia.com/embedded/jetpack<br/>
 * Connect Jetson (TX1) to router (switch)<br/>
 * Navigate to download folder of JetPack file<br/>
 * Give executability rights to the installer file:<br/>
+
 > $ chmod +x JetPack-L4T-2.3.1-linux-x64.run
 
-Run the installer file:<br/>
+* Run the installer file:<br/>
+
 > $ ./JetPack-L4T-2.3.1-linux-x64.run
 
 Select Jetson platform (here: Jetson TX1 with Ubuntu Host)<br/>
