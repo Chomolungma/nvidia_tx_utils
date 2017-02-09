@@ -15,12 +15,12 @@ You should now be able to log into the Ubuntu GUI
 
 ## Installing JetPack 
 https://developer.nvidia.com/embedded/jetpack<br/>
-Download JetPack on the Host Machine by joining Embedded System Developer programme on NVIDIA page<br/>
-Latest at the time of writing : JetPack-L4T-2.3.1-linux-x64.run<br/>
-Connect HOST (Ubuntu 14.04) machine to router (switch)<br/>
-Connect Jetson (TX1) to router (switch)<br/>
-Navigate to download folder of JetPack file<br/>
-Give executability rights to the installer file:<br/>
+* Download JetPack on the Host Machine by joining Embedded System Developer programme on NVIDIA page<br/>
+* Latest at the time of writing : JetPack-L4T-2.3.1-linux-x64.run<br/>
+* Connect HOST (Ubuntu 14.04) machine to router (switch)<br/>
+* Connect Jetson (TX1) to router (switch)<br/>
+* Navigate to download folder of JetPack file<br/>
+* Give executability rights to the installer file:<br/>
 > $ chmod +x JetPack-L4T-2.3.1-linux-x64.run
 
 Run the installer file:<br/>
