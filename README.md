@@ -69,7 +69,7 @@ You should see a running example of Structure From Motion in what appears to be 
 ***
 
 ## Verifying OpenCV installation
-You can verify that openCV has been successfully installed by running a quick example. Refer to opencv_stuff/test-working/ for source code
+You can verify that openCV has been successfully installed by running a quick example. Refer to opencv_stuff/test-working/ for source code<br/>
 STEP 1: Make sure you have a text editor (I use gedit)<br/>
 STEP 2: Install cmake<br/>
 > $ sudo apt-get install cmake
