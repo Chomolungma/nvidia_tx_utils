@@ -14,6 +14,8 @@ STEP 2: After the installation completes reboot the device,<br/>
 
 STEP 3: You should now be able to log into the Ubuntu GUI
 
+***
+
 ## Installing JetPack 
 Link - https://developer.nvidia.com/embedded/jetpack<br/>
 STEP 1: Download **JetPack** on the Host Machine by joining *Embedded System Developer* programme on NVIDIA page<br/>
@@ -39,6 +41,8 @@ STEP 12: The device will proceed to get flashed. Wait until you see the message 
 STEP 13: Hit enter to continue on the host machine and set the IP address using ifconfig of prompted.<br/>
 STEP 14: Remove all packages from the host (y/n) - decide accordingly<br/>
 
+***
+
 ## Verifying CUDA 8.0 installation
 By installing JetPack, you should now be able to run CUDA and all the samples that come with it<br/>
 STEP 1: To check if you have successfully intalled cuda - version should say CUDA 8.0<br/>
@@ -52,6 +56,7 @@ STEP 3: You should see a list of executable scripts for all the CUDA samples<br/
 
 You should see the example running! I noticed a frame rate of ~38fps for this example<br/>
 
+***
 
 ## Verifying VisionWorks installation
 In a similar manner you can test the Vision Works install<br/>
@@ -60,6 +65,39 @@ In a similar manner you can test the Vision Works install<br/>
 > $./nvx_sample_sfm
 
 You should see a running example of Structure From Motion in what appears to be a parking lot<br/>
+
+***
+
+## Verifying OpenCV installation
+You can verify that openCV has been successfully installed by running a quick example. Refer to opencv_stuff/test-working/ for source code<br/>
+STEP 1: Make sure you have a text editor (I use gedit)<br/>
+STEP 2: Install cmake<br/>
+> $ sudo apt-get install cmake
+
+STEP 3: After creating helloworld.cpp and CMakeLists.txt create a build directory<br/>
+> $ mkdir build
+
+STEP 4: Enter build directory and run cmake<br/>
+> $ cd build/
+> $ cmake ..
+
+STEP 5: Run the make command from the build directory<br/>
+> $ make
+
+STEP 5(o): If you encounter a missing library binding error such as this<br>
+> /usr/bin/ld: cannot find -lopencv_dep_cudart
+
+You might need to manually specify the location of the library before executing the make command<br/>
+STEP 5(o): You can do this by navigating to the links.txt file <br/>
+> $ cd ~/nvidia-tx1/opencv_stuff/test-working/build/CMakeFiles/cv_hello.dir/
+> $ gedit links.txt
+
+STEP 5(o): Replace -lopencv_dep_cudart with the location of the libcudart.so file (/usr/local/cuda-8.0/lib64/libcudart.so)<br/>
+
+STEP 5(o): Run the make command from the build directory
+
+STEP 6: You will generate an executable named cv_hello. You can now run the example and should see a similar output.<br/>
+> $ ./cv_hello
 
 
 

@@ -56,6 +56,8 @@ STEP 3: You should see a list of executable scripts for all the CUDA samples<br/
 
 You should see the example running! I noticed a frame rate of ~38fps for this example<br/>
 
+![CUDAExample](https://github.com/ShreyasSkandan/nvidia-tx1/blob/master/imgs/smokeparticles.png)
+
 ***
 
 ## Verifying VisionWorks installation
@@ -65,6 +67,8 @@ In a similar manner you can test the Vision Works install<br/>
 > $./nvx_sample_sfm
 
 You should see a running example of Structure From Motion in what appears to be a parking lot<br/>
+
+![VisionWorksExample](https://github.com/ShreyasSkandan/nvidia-tx1/blob/master/imgs/sfm_screenshot.png)
 
 ***
 
@@ -98,6 +102,8 @@ STEP 5(o): Run the make command from the build directory
 
 STEP 6: You will generate an executable named cv_hello. You can now run the example and should see a similar output.<br/>
 > $ ./cv_hello
+
+![OpenCVExample](https://github.com/ShreyasSkandan/nvidia-tx1/blob/master/imgs/opencvexample.png)
 
 
 
