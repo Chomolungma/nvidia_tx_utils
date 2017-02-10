@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/opencv_test/helloworld.cpp
+/home/ubuntu/nvidia-tx1/opencv_stuff/test-working/helloworld.cpp
 opencv2/highgui/highgui.hpp
 -
 
