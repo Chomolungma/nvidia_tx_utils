@@ -115,5 +115,10 @@ Click [here](https://github.com/dusty-nv/jetson-reinforcement) to go to the Torc
 
 The actual installation script can be found [here](https://github.com/dusty-nv/jetson-reinforcement/blob/master/CMakePreBuild.sh).
 
+The above script did not automatically update my bash profile, so don't forget to do that if it hasn't done it for you automatically.
+
+Adding the following to your $PATH variable should work:
+
+> /home/ubuntu/jetson-reinforcement/build/torch/bin
 ***
 

@@ -105,5 +105,15 @@ STEP 6: You will generate an executable named cv_hello. You can now run the exam
 
 ![OpenCVExample](https://github.com/ShreyasSkandan/nvidia-tx1/blob/master/imgs/opencvexample.png)
 
+***
 
+## Installing Torch7 on NVIDIA TX1
+
+To install Torch7 on the Jetson TX1, I recommend using [dusty-nv](https://github.com/dusty-nv)'s installation script.<br/>
+
+Click [here](https://github.com/dusty-nv/jetson-reinforcement) to go to the Torch7 installation repository. Follow the instructions and you should have Torch7 successfully running on the TX1 in under 45 minutes. You can skip the gazebo install and that should make the process quicker.
+
+The actual installation script can be found [here](https://github.com/dusty-nv/jetson-reinforcement/blob/master/CMakePreBuild.sh).
+
+***
 
