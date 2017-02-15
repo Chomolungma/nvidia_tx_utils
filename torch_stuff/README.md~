@@ -22,5 +22,29 @@ The above installation script does not install the 'cunn' library, therefore you
 
 >luarocks make rocks/cunn-scm-1.rockspec
 
+## Installing OpenCV 2.4 on NVIDIA TX1
 
+If you followed the JetPack installation you will already have OpenCV installed. You can verify this installation by running some of the samples as shown in the instructions on the previous page.
+
+## Installing png++ on NVIDIA TX1
+
+STEP 1: First verify the version of libpng that you have on your system. From experience I noticed that libpng1.6 does not work well with png++ version0.2.9. Therefore I would recommend downgrading your libpng version to 1.2.X and switching to the png++ version 0.2.7.
+
+To find the version of your libpng installation:
+
+> convert -list format | grep PNG
+
+STEP 2: To download Png++ version=0.2.7 click [here](http://download.savannah.gnu.org/releases/pngpp/png++-0.2.7.tar.gz)
+
+STEP 3: Unzip the folder, and install using make
+
+> make install PREFIX=$HOME
+
+STEP 2A: Alternatively, the documentation recommends first testing the installation. You can do that as follows:
+
+> make
+
+> make test
+
+If you don't see any errors you should be ready to go to STEP 3 directly.
 ***
