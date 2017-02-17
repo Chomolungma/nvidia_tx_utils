@@ -122,3 +122,18 @@ Adding the following to your $PATH variable should work:
 > /home/ubuntu/jetson-reinforcement/build/torch/bin
 ***
 
+## Using additional storage with the NVIDIA TX1
+
+[![Alt text for your video](https://img.youtube.com/vi/6nzWt42mzqk/0.jpg)](http://www.youtube.com/watch?v=6nzWt42mzqk)
+***
+
+## Automatically mounting your storage device on the NVIDIA TX1
+
+[![Alt text for your video](https://img.youtube.com/vi/F75NGzf7KvM/0.jpg)](http://www.youtube.com/watch?v=F75NGzf7KvM)
+***
+
+## Creating swapfile for extra performance
+
+[![Alt text for your video](https://img.youtube.com/vi/pmJsLYlCy0w/0.jpg)](http://www.youtube.com/watch?v=pmJsLYlCy0w)
+***
+
