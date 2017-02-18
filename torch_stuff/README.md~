@@ -1,4 +1,4 @@
-# Torch7 on Jetson TX1 for Stereo Matching
+# Torch7 on Jetson TX1 
 
 ## Installing Torch7 on NVIDIA TX1
 

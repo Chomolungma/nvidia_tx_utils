@@ -38,7 +38,9 @@ STEP 2: To download Png++ version=0.2.7 click [here](http://download.savannah.gn
 
 STEP 3: Unzip the folder, and install using make
 
-> make install PREFIX=$HOME
+> sudo make install PREFIX=$HOME
+
+Note: sudo is cruicial to having smooth linking of library files.
 
 STEP 2A: Alternatively, the documentation recommends first testing the installation. You can do that as follows:
 
