@@ -79,6 +79,7 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
         for( k = 0; k < 2; k++ )
         {
             const string& filename = imagelist[i*2+k];
+            // fix this later - either change xml file to absolute paths or include parent path as parameter
             Mat img = imread(("/home/ubuntu/nvidia-tx1/opencv_stuff/stereo-calib/data/" + filename), 0);
             //cout<<!img.data;
             if(img.empty())
@@ -125,7 +126,7 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
                     exit(-1);
             }
             else
-                putchar('.');
+                cout << filename << endl;
             if( !found )
                 break;
             cornerSubPix(img, corners, Size(11,11), Size(-1,-1),
@@ -139,7 +140,7 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
             j++;
         }
     }
-    cout << j << " pairs have been successfully detected.\n";
+    cout << j << " image pairs have been successfully detected.\n";
     nimages = j;
     if( nimages < 2 )
     {
@@ -176,13 +177,13 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
                     CALIB_SAME_FOCAL_LENGTH +
                     CALIB_RATIONAL_MODEL +
                     CALIB_FIX_K3 + CALIB_FIX_K4 + CALIB_FIX_K5);
-    cout << "done with RMS error=" << rms << endl;
+    cout << "Calibration complete with RMS error = " << rms << endl;
 
-// CALIBRATION QUALITY CHECK
-// because the output fundamental matrix implicitly
-// includes all the output information,
-// we can check the quality of calibration using the
-// epipolar geometry constraint: m2^t*F*m1=0
+    // CALIBRATION QUALITY CHECK
+    // because the output fundamental matrix implicitly
+    // includes all the output information,
+    // we can check the quality of calibration using the
+    // epipolar geometry constraint: m2^t*F*m1=0
     double err = 0;
     int npoints = 0;
     vector<Vec3f> lines[2];
@@ -206,7 +207,7 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
         }
         npoints += npt;
     }
-    cout << "average epipolar err = " <<  err/npoints << endl;
+    cout << "The average epipolar error = " <<  err/npoints << endl;
 
     // save intrinsic parameters
     FileStorage fs("intrinsics.yml", FileStorage::WRITE);
@@ -240,21 +241,21 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
     // or up-down camera arrangements
     bool isVerticalStereo = fabs(P2.at<double>(1, 3)) > fabs(P2.at<double>(0, 3));
 
-// COMPUTE AND DISPLAY RECTIFICATION
+    // COMPUTE AND DISPLAY RECTIFICATION
     if( !showRectified )
         return;
 
     Mat rmap[2][2];
-// IF BY CALIBRATED (BOUGUET'S METHOD)
+    // IF BY CALIBRATED (BOUGUET'S METHOD)
     if( useCalibrated )
     {
         // we already computed everything
     }
-// OR ELSE HARTLEY'S METHOD
+    // OR ELSE HARTLEY'S METHOD
     else
- // use intrinsic parameters of each camera, but
- // compute the rectification transformation directly
- // from the fundamental matrix
+    // use intrinsic parameters of each camera, but
+    // compute the rectification transformation directly
+    // from the fundamental matrix
     {
         vector<Point2f> allimgpt[2];
         for( k = 0; k < 2; k++ )
@@ -349,7 +350,7 @@ int main(int argc, char** argv)
     //if (parser.has("help"))
     //    return print_help();
     //showRectified = !parser.has("nr");
-    showRectified = true;
+    showRectified = false;
     //imagelistfn = parser.get<string>("@input");
     imagelistfn = "/home/ubuntu/nvidia-tx1/opencv_stuff/stereo-calib/data/calib.xml";
     //boardSize.width = parser.get<int>("w");
@@ -369,14 +370,18 @@ int main(int argc, char** argv)
     bool ok = readStringList(imagelistfn, imagelist);
     if(!ok || imagelist.empty())
     {
-        cout << "can not open " << imagelistfn << " or the string list is empty" << endl;
+        cout << "Cannot open " << imagelistfn << " or the string list is empty" << endl;
         return print_help();
     }
 
-    cout<<"Image list is : \n";
+    //cout<<"Image list is : \n";
+    int image_count = 0;
     for(it1=imagelist.begin();it1 !=imagelist.end();it1++)
-        cout<<*it1<<endl;
-    
-    StereoCalib(imagelist, boardSize, squareSize, false, true, showRectified);
+    {
+        image_count += 1;
+        //cout<<*it1<<endl;
+    }
+    cout<<"Image list size is : "<<image_count/2<<endl;
+    StereoCalib(imagelist, boardSize, squareSize, true, true, showRectified);
     return 0;
 }
