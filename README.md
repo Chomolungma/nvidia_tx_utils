@@ -1,4 +1,4 @@
-# NVIDIA - TX1 
+# NVIDIA - TX1 and TX2
 Repository of all NVIDIA TX-1/TX-2 related code and usage instructions. 
 
 ## Initial Set-up
@@ -21,7 +21,7 @@ STEP 3: You should now be able to log into the Ubuntu GUI
 Link - https://developer.nvidia.com/embedded/jetpack<br/>
 STEP 1: Download **JetPack** on the Host Machine by joining *Embedded System Developer* programme on NVIDIA page<br/>
 The latest verson at the time of writing was *JetPack-L4T-2.3.1-linux-x64.run*<br/>
-update: <b>The latest version at the time of writing (TX-2) was *JetPack-L4T-3-linux-x64.run</b>
+UPDATE: <b>The latest version at the time of writing (TX-2) was *JetPack-L4T-3-linux-x64.run</b><br/>
 STEP 2: Connect HOST (*Ubuntu 14.04* or *Ubuntu 16.04 with JetPack 3*) machine to router (switch)<br/>
 STEP 3: Connect Jetson (TX1/TX2) to router (switch)<br/>
 STEP 4: Navigate to download folder of JetPack file and give executability rights to the installer file:<br/>
@@ -78,9 +78,9 @@ The samples are saved in /usr/share/. You must move them to a desired location b
 
 > $ ./usr/share/visionworks/install_samples.sh ~
 
-This will move the samples to your Home directory. Navigate to this folder and issue a make command to build all VisionWorks-1.6 samples as shown above.
+This will move the samples to your $HOME directory. Navigate to this folder and issue a <i>make</i> command to build all <b>VisionWorks-1.6</b> samples as shown above.
 
-<b>note:</b> At the time of writing, I was unsuccessful in installing VisionWorks 1.6 on my most machine. I was only able to install it on the TX-2. Code written in OpenVX using the NVXIO library will not move over perfectly from a TX-1 to the TX-2 because the NVXIO library has now been split into NVX and OVX, so editing of function calls and such will be required. </br>
+<b>NOTE:</b> At the time of writing, I was unsuccessful in installing VisionWorks 1.6 on my most machine. I was only able to install it on the TX-2. Code written in OpenVX using the NVXIO library will not move over perfectly from a TX-1 to the TX-2 because the NVXIO library has now been split into NVX and OVX, so editing of function calls and such will be required. </br>
 
 ***
 
