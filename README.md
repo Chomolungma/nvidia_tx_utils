@@ -115,13 +115,15 @@ STEP 5(o): Run the make command from the build directory
 STEP 6: You will generate an executable named cv_hello. You can now run the example and should see a similar output.<br/>
 > $ ./cv_hello
 
+<b>NOTE:</b> At the time of writing, JetPack 3 and OpenCV <b>(OpenCV4Tegra)</b> were compiled with the wrong GPU architecutre. Instead of <b>compute_62</b> and <b>sm_62</b> it has been compiled with <b>compute_53</b> and <b>sm_53</b> resulting in the failure to use any of opencv's gpu functions with OpenCV4Tegra. You can build OpenCV from source which is a work around for this problem until the next update.
+
 ![OpenCVExample](https://github.com/ShreyasSkandan/nvidia-tx1/blob/master/imgs/opencvexample.png)
 
 ***
 
-## Installing Torch7 on NVIDIA TX1
+## Installing Torch7 on NVIDIA TX1/TX2
 
-To install Torch7 on the Jetson TX1, I recommend using [dusty-nv](https://github.com/dusty-nv)'s installation script.<br/>
+To install Torch7 on the Jetson TX1/TX2, I recommend using [dusty-nv](https://github.com/dusty-nv)'s installation script.<br/>
 
 Click [here](https://github.com/dusty-nv/jetson-reinforcement) to go to the Torch7 installation repository. Follow the instructions and you should have Torch7 successfully running on the TX1 in under 45 minutes. You can skip the gazebo install and that should make the process quicker.
 
