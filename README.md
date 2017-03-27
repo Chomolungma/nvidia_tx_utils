@@ -45,6 +45,26 @@ STEP 14: Remove all packages from the host (y/n) - decide accordingly<br/>
 
 ***
 
+## Installing ROS Kinetic on TX-1 or TX-2
+
+Installing ROS on the Tegra devices is pretty straightforward, following the instructions from the official ROS Installer Guidelines. <br/>
+
+Inside this repository you will find an executable shell script named **ros-kinetic-install.sh**. This is a compilation of all the steps to install ROS Kinetic on your TX1/TX2. This script will install the barebones version of ROS-Kinetic. If you wish to install the full desktop version, comment out the script that installs the **ros-base** version and uncomment the desired version installer. <br/>
+
+An additional note is in the initialization of **rosdep**. You may recieve a warning requiring you to fix your rosdep permission.<br/>
+
+To do that, simply follow the instructions mentioned, i.e <br/>
+> $sudo rosdep fix-permissions
+> $rosdep update
+
+At the end of the installer, you should be able to launch your **roscore** and view your rosnode list successfully!<br/>
+
+
+
+
+
+***
+
 ## Verifying CUDA 8.0 installation
 By installing JetPack, you should now be able to run CUDA and all the samples that come with it<br/>
 STEP 1: To check if you have successfully intalled cuda - version should say CUDA 8.0<br/>
@@ -115,7 +135,7 @@ STEP 5(o): Run the make command from the build directory
 STEP 6: You will generate an executable named cv_hello. You can now run the example and should see a similar output.<br/>
 > $ ./cv_hello
 
-<b>NOTE:</b> At the time of writing, JetPack 3 and OpenCV <b>(OpenCV4Tegra)</b> were compiled with the wrong GPU architecutre. Instead of <b>compute_62</b> and <b>sm_62</b> it has been compiled with <b>compute_53</b> and <b>sm_53</b> resulting in the failure to use any of opencv's gpu functions with OpenCV4Tegra. You can build OpenCV from source which is a work around for this problem until the next update.
+<b>NOTE:</b> At the time of writing, JetPack 3 and OpenCV <b>(OpenCV4Tegra)</b> for the TX2 were compiled with the wrong GPU architecutre. Instead of <b>compute_62</b> and <b>sm_62</b> it has been compiled with <b>compute_53</b> and <b>sm_53</b> resulting in the failure to use any of opencv's gpu functions with OpenCV4Tegra. You can build OpenCV from source which is a work around for this problem until the next update.
 
 ![OpenCVExample](https://github.com/ShreyasSkandan/nvidia-tx1/blob/master/imgs/opencvexample.png)
 
