@@ -54,8 +54,9 @@ Inside this repository you will find an executable shell script named **ros-kine
 An additional note is in the initialization of **rosdep**. You may recieve a warning requiring you to fix your rosdep permission.<br/>
 
 To do that, simply follow the instructions mentioned, i.e <br/>
-> $sudo rosdep fix-permissions
-> $rosdep update
+> $ sudo rosdep fix-permissions
+
+> $ rosdep update
 
 At the end of the installer, you should be able to launch your **roscore** and view your rosnode list successfully!<br/>
 
