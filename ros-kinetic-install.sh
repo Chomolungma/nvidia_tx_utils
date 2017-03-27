@@ -11,13 +11,13 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB0
 sudo apt-get update
 
 # Barebones ROS Install
-sudo apt-get install ros-kinetic-ros-base -y
+#sudo apt-get install ros-kinetic-ros-base -y
 
 # or Desktop Full Installation
-#sudo apt-get install ros-kinetic-desktop-full
+sudo apt-get install ros-kinetic-desktop-full -y
 
 # or Desktop Installation
-#sudo apt-get install ros-kinetic-desktop
+#sudo apt-get install ros-kinetic-desktop -y
 
 # STEP 4 - Initialize rosdep
 sudo rosdep init
