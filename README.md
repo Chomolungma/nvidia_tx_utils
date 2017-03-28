@@ -45,10 +45,10 @@ STEP 14: Remove all packages from the host (y/n) - decide accordingly<br/>
 
 **NOTE**<br/>
 On the TX-2, the installation process resulted in failure to install VisionWorks 1.6 on the host machine. This happens due to a missing cudart library file. To work around this, the folks over at the NVIDIA dev-talk forums suggested the following installation steps (requiring manual selection):<br/>
-Visionworks 1.6.0 on host can be successfully installed with following manually steps:<br/>
-1.Install Jetpack with full options first<br/>
-2.Remove Visionworks by custom options ( visionworks only )<br/>
-3.Install Visionworks by custom options ( visionworks only )<br/>
+>Visionworks 1.6.0 on host can be successfully installed with following manually steps:<br/>
+>1.Install Jetpack with full options first<br/>
+>2.Remove Visionworks by custom options ( visionworks only )<br/>
+>3.Install Visionworks by custom options ( visionworks only )<br/>
 
 ***
 
