@@ -43,6 +43,13 @@ STEP 12: The device will proceed to get flashed. Wait until you see the message 
 STEP 13: Hit enter to continue on the host machine and set the IP address using ifconfig of prompted.<br/>
 STEP 14: Remove all packages from the host (y/n) - decide accordingly<br/>
 
+**NOTE**<br/>
+On the TX-2, the installation process resulted in failure to install VisionWorks 1.6 on the host machine. This happens due to a missing cudart library file. To work around this, the folks over at the NVIDIA dev-talk forums suggested the following installation steps (requiring manual selection):<br/>
+Visionworks 1.6.0 on host can be successfully installed with following manually steps:<br/>
+Install Jetpack with full options first<br/>
+Remove Visionworks by custom options ( visionworks only )<br/>
+Install Visionworks by custom options ( visionworks only )<br/>
+
 ***
 
 ## Installing ROS Kinetic on TX-1 or TX-2
