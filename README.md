@@ -65,6 +65,8 @@ To do that, simply follow the instructions mentioned, i.e <br/>
 
 > $ rosdep update
 
+> $ source /opt/ros/ketic/setup.bash
+
 At the end of the installer, you should be able to launch your **roscore** and view your rosnode list successfully!<br/>
 
 
