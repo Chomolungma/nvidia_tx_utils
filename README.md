@@ -21,7 +21,9 @@ Repository of some NVIDIA TX-1/TX-2 related scripts and usage instructions.
 6. [Installing Lua Torch7](install_torch7.md)
 * Install Torch7 for Lua
 
-7. Hardware and IO Related
+7. [General Tools and Tips](basic_tools.md)
+
+8. Hardware and IO Related
 * [Adding Storage](http://www.youtube.com/watch?v=6nzWt42mzqk)
 * [Automatic Mounting](http://www.youtube.com/watch?v=6nzWt42mzqk)
 * [Creating Swapfiles](http://www.youtube.com/watch?v=pmJsLYlCy0w)
