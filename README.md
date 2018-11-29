@@ -26,7 +26,7 @@ Repository of some NVIDIA TX-1/TX-2 related scripts and usage instructions.
 
 7. [General Tools and Tips](basic_tools.md)
 
-8. [TensorFlow](tensorflow_md)
+8. [TensorFlow](tensorflow.md)
 * Installing TensorFlow
 
 8. Hardware and IO Related
