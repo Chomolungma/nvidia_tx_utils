@@ -24,6 +24,8 @@ sudo apt-get install -y liblapack3 liblapack-dev
 sudo apt-get install -y libjpeg-dev zlib1g-dev
 sudo apt-get install -y python-catkin-tools
 sudo apt-get install -y ros-kinetic-pcl-ros ros-kinetic-image-view
+sudo apt-get install -y python3-empy
+sudo apt-get install -y libgpgme11-dev
 ```
 
 or,

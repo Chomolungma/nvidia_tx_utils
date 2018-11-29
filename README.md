@@ -7,6 +7,9 @@ Repository of some NVIDIA TX-1/TX-2 related scripts and usage instructions.
 * JetPack Installation
 
 2. [Installing ROS](ros_install.md)
+* Installing ROS Kinetic
+* Setting up workspace
+* Independent workspace for Python3.5 and Deep Learning nodes
 
 3. [Verify CUDA Installation](verify_cuda.md)
 * Install and verify samples
@@ -22,6 +25,9 @@ Repository of some NVIDIA TX-1/TX-2 related scripts and usage instructions.
 * Install Torch7 for Lua
 
 7. [General Tools and Tips](basic_tools.md)
+
+8. [TensorFlow](tensorflow_md)
+* Installing TensorFlow
 
 8. Hardware and IO Related
 * [Adding Storage](http://www.youtube.com/watch?v=6nzWt42mzqk)
